@@ -30,7 +30,7 @@
 
                     <!-- Authentication Links -->
                 <ul class="nav navbar-nav navbar-right" v-if="user.authenticated">     
-                    <li><router-link :to="{ name: 'test' }">Test</router-link></li>
+                    <!--<li><router-link :to="{ name: 'test' }">Test</router-link></li>-->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ user.data.name }} <span class="caret"></span>

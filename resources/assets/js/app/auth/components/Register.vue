@@ -48,6 +48,9 @@
 						password: this.password
 					},
 					context: this
+				}).then(() => {
+					//redirect to home page
+					this.$router.replace({ name: 'home' })
 				});
 			}
 		}
