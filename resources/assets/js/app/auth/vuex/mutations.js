@@ -3,7 +3,7 @@ import { isEmpty } from 'lodash'
 
 export const setToken = (state, token) => {
 	if (isEmpty(token)) {
-		localforage.remove('authtoken', token)
+		localforage.removeItem('authtoken', token)
 		return
 	}
 
