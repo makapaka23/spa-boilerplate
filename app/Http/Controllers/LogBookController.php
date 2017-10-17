@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AppController extends Controller
+class LogBookController extends Controller
 {
     public function index()
     {
     	return response()->json([
-    		'data' => 'Good Job'
+    		'data' => 'INDEX: Good Job'
     	], 200);
     }
 }

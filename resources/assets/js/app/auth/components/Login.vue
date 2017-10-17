@@ -1,6 +1,5 @@
 <template>
 	
-
 	<div class="login-page">
 	  <div class="form">
 	  	<div class="alert alert-danger" v-if="errors.root">
@@ -25,6 +24,8 @@
 
 <script>
 	import { mapActions } from 'vuex'
+	import localforage from 'localforage'
+	import { isEmpty } from 'lodash'
 
 	export default {
 		data() {
@@ -46,8 +47,16 @@
 					},
 					context: this
 				}).then(() => {
-					//redirect to home page
-					this.$router.replace({ name: 'home' })
+					localforage.getItem('target').then((name) => {
+						if (isEmpty(name)) {
+							// redirect to thome
+							this.$router.replace({ name: 'home' })
+							return
+						}
+						// or redirect to where user requested
+						this.$router.replace({ name: name })	
+					})
+					
 				});
 			}
 		}
