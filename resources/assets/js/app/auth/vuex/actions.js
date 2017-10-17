@@ -18,9 +18,15 @@ export const login = ({ dispatch }, { payload, context }) => {
 			dispatch('fetchUser')
 		})
 	}).catch((error) => {
-		console.log(error)
-		//context.errors = error.response.data.errors
+		//console.log(error)
+		context.errors = error.response.data.errors
 	})
+}
+
+export const logout = ({ dispatch }) => {
+    return axios.post('/api/logout').then((response) => {
+        dispatch('clearAuth')
+    })
 }
 
 export const fetchUser = ({ commit }) => {
