@@ -2,7 +2,9 @@ import { setHttpToken } from '../../../helpers'
 
 export const register = ({ dispatch }, { payload, context }) => {
 	return axios.post('/api/register', payload).then((response) => {
-		console.log(response)
+		dispatch('setToken', response.data.meta.token).then(() => {
+			dispatch('fetchUser')
+		})
 	}).catch((error) => {
 		context.errors = error.response.data.errors
 	})
@@ -11,7 +13,6 @@ export const register = ({ dispatch }, { payload, context }) => {
 export const login = ({ dispatch }, { payload, context }) => {
 	return axios.post('/api/login', payload).then((response) => {
 		dispatch('setToken', response.data.meta.token).then(() => {
-			console.log('fetch user')
 			dispatch('fetchUser')
 		})
 	}).catch((error) => {
