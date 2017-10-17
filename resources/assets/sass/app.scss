@@ -2,6 +2,7 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
 
 // Variables
 @import "variables";
@@ -10,7 +11,7 @@
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 body {
-	padding-top: 40px;
+	//padding-top: 40px;
 }
 
 .has-error {
@@ -117,4 +118,46 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
+}
+
+.add__exercise {
+    border: 0;
+    outline-width: 0;
+    font-size: 42px;
+    font-weight: bold;
+    color: black;
+    font-family: "Saira Extra Condensed", Sans-Serif;
+    background: #76b852; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+    background: -moz-linear-gradient(right, #76b852, #8DC26F);
+    background: -o-linear-gradient(right, #76b852, #8DC26F);
+    background: linear-gradient(to left, #76b852, #8DC26F);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;   
+
+    [placeholder] {
+        text-align: center;
+    }
+}
+
+.sets {
+  list-style-type: none;
+}
+
+.exercise {
+  font-size: 22px;
+  color: black !important;
+}
+
+.sets-section {
+  padding-top: 40px;
+}
+
+.sets-border {
+  min-height: 500px;
+  min-width: 700px;
+  margin-top: 300px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
 }
