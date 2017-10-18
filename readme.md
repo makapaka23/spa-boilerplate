@@ -13,6 +13,8 @@ Simple boilerplate SPA that uses JWT Authentication tokens for register/login.
 
 Clean log book training diary with notepad style layout.
 
+* To install run `composer install` and `npm install`
+
 ## TODO
 
 - actual saving of logbook entries to backend
