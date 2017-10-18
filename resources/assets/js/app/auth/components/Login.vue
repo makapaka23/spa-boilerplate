@@ -49,7 +49,7 @@
 				}).then(() => {
 					localforage.getItem('target').then((name) => {
 						if (isEmpty(name)) {
-							// redirect to thome
+							// redirect to home
 							this.$router.replace({ name: 'home' })
 							return
 						}
